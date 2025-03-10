@@ -40,7 +40,7 @@ public class ChistesApp {
                     if (numero == 5) {
                         JOptionPane.showMessageDialog(frame, "Por el culo te la hinco!", "Respuesta Correcta", JOptionPane.INFORMATION_MESSAGE);
                     } else if (numero >= 1 && numero <= 4) {
-                        JOptionPane.showMessageDialog(frame, "Has seleccionado el chiste " + numero, "Información", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(frame, "Has seleccionado el chiste" + numero, "Información", JOptionPane.INFORMATION_MESSAGE);
                     } else {
                         JOptionPane.showMessageDialog(frame, "Introduce el NUMERO de chistes QUE HAY", "Error", JOptionPane.ERROR_MESSAGE);
                     }
