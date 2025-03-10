@@ -6,27 +6,25 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.3.0</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>interfaz.InterfazJenkins</mainClass>
-                        </manifest>
-                    </archive>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
-                    <finalName>interfazExamen</finalName>
-                </configuration>
+                <groupId>com.akathist.maven.plugins.launch4j</groupId>
+                <artifactId>launch4j-maven-plugin</artifactId>
+                <version>2.5.3</version>
                 <executions>
                     <execution>
-                        <id>make-assembly</id>
+                        <id>l4j-clui</id>
                         <phase>package</phase>
                         <goals>
-                            <goal>single</goal>
+                            <goal>launch4j</goal>
                         </goals>
+                        <configuration>
+                            <headerType>gui</headerType>
+                            <outfile>${project.build.directory}/${project.build.finalName}.exe</outfile>
+                            <jar>${project.build.directory}/${project.build.finalName}.jar</jar>
+                            <errTitle>App Error</errTitle>
+                            <classPath>
+                                <mainClass>interfaz.InterfazJenkins</mainClass>
+                            </classPath>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
